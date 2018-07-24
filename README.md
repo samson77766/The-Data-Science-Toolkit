@@ -8,7 +8,7 @@ To generate the SSH key , enter command “ ssh-keygen -t rsa” in the Terminal
 Press the ENTER key to accept the default location. The ssh-keygen utility prompts you for a passphrase.
 Your private key is saved to the id_rsa file in the .ssh directory and is used to verify the public key you use belongs to the same Triton Compute Service account.
 Your public key is saved to the id_rsa.pub;file and is the key you upload to your Triton Compute Service account. You can save this key to the clipboard
-4. Type “pbcopy < ~/.ssh/id_rsa.pub
+4. Type `pbcopy < ~/.ssh/id_rsa.pub`
 5. After you copy the SSH key to the clipboard, return to your account page
 6. Choose to Import Public Key and paste your SSH key into the Public Key field
 7. In the Key Name field, provide a name for the key. Note: although providing a key name is optional, it is a best practice for ease of managing multiple SSH keys
@@ -17,10 +17,15 @@ Your public key is saved to the id_rsa.pub;file and is the key you upload to you
 ## SECURITY GROPUP, EC2 INSTANCE AND DOCKER
 1. On Amazon E2 ,Create security group
 2. Launch a new Ec2 Instance
-3. Provision a new instance with Docker
+3. Provision a new instance with Docker 
+Install Docker. In git bash, using command *curl -sSl https://get.docker.com | sh* to get docker, then using 
+ command *sudo usermod -aG docker ubuntu*, reconnect/SSH to AWS using command *Docker -v*
 4. Pull the data science notebook image
+Use command *Docker pull jupyter/datascience-notebook* to obtain the correct imag
 5. Run a data science notebook container
+command *docker run -p 80:8888 -v /home/ubuntu:/home/jovyan jupyter/datascience-notebook* and then copy and paste token to ip:443 to open jupyter
 6. Get the token and use on Jupiter
+Security: notebook uses token to authenticate requests
 
 ## BUDGET FOR RUNNING A JUPYTER DATA SCIENCE NOTEBOOK SERVER FOR THREE MONTHS 
 
