@@ -32,3 +32,5 @@ Security: notebook uses token to authenticate requests
 #a. m4.10xlarge cost $2.00 per hour and $4,320 for three months 
 #b. m4.xlarge cost $0.20 per hour and $432 for three months
 #c. m4.4xlarge cost $0.80 per hour and $1728 for three months
+
+![alt text](https://github.com/samson77766/The-Data-Science-Toolkit/blob/master/Data%20science%20toolkit.jpg)
